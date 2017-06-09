@@ -30,13 +30,12 @@
         "pageNumbers": false,
         "paperSize": "a4"
     },
-    "plugins": ["etoc"],
+    "plugins": ["atoc"],
     "pluginsConfig": {
-      "etoc": {
-        "mindepth": 2,
-        "maxdepth": 4,
-        "notoc": false
-      }
+        "atoc": {
+            "addClass": true,
+            "className": "atoc"
+        }
     },
     "title": "Vert.x 官方文档中文翻译",
     "variables": {}

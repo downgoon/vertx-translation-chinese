@@ -17,7 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-etoc/plugin.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-atoc/atoc.css">
                 
             
                 
@@ -1024,75 +1024,6 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="vertx-config">Vert.x Config</h1>
-<!-- toc --><div id="toc" class="toc">
-
-<ul>
-<li><a href="#&#x4E2D;&#x82F1;&#x6587;&#x5BF9;&#x7167;&#x8868;">&#x4E2D;&#x82F1;&#x6587;&#x5BF9;&#x7167;&#x8868;</a></li>
-<li><a href="#&#x7EC4;&#x4EF6;&#x4ECB;&#x7ECD;">&#x7EC4;&#x4EF6;&#x4ECB;&#x7ECD;</a></li>
-<li><a href="#&#x6982;&#x5FF5;">&#x6982;&#x5FF5;</a></li>
-<li><a href="#&#x4F7F;&#x7528;-config-retriever">&#x4F7F;&#x7528; Config Retriever</a></li>
-<li><a href="#&#x91CD;&#x8F7D;&#x89C4;&#x5219;">&#x91CD;&#x8F7D;&#x89C4;&#x5219;</a></li>
-<li><a href="#&#x652F;&#x6301;&#x7684;&#x914D;&#x7F6E;&#x4ED3;&#x5E93;">&#x652F;&#x6301;&#x7684;&#x914D;&#x7F6E;&#x4ED3;&#x5E93;</a><ul>
-<li><a href="#&#x914D;&#x7F6E;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;">&#x914D;&#x7F6E;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;</a></li>
-<li><a href="#&#x6587;&#x4EF6;">&#x6587;&#x4EF6;</a></li>
-<li><a href="#json">JSON</a></li>
-<li><a href="#&#x73AF;&#x5883;&#x53D8;&#x91CF;">&#x73AF;&#x5883;&#x53D8;&#x91CF;</a></li>
-<li><a href="#&#x7CFB;&#x7EDF;&#x5C5E;&#x6027;">&#x7CFB;&#x7EDF;&#x5C5E;&#x6027;</a></li>
-<li><a href="#http">HTTP</a></li>
-<li><a href="#event-bus">Event Bus</a></li>
-<li><a href="#&#x76EE;&#x5F55;">&#x76EE;&#x5F55;</a></li>
-</ul>
-</li>
-<li><a href="#&#x76D1;&#x542C;&#x914D;&#x7F6E;&#x53D8;&#x66F4;">&#x76D1;&#x542C;&#x914D;&#x7F6E;&#x53D8;&#x66F4;</a></li>
-<li><a href="#&#x68C0;&#x7D22;&#x6700;&#x8FD1;&#x4E00;&#x6B21;&#x83B7;&#x53D6;&#x7684;&#x914D;&#x7F6E;&#x5185;&#x5BB9;">&#x68C0;&#x7D22;&#x6700;&#x8FD1;&#x4E00;&#x6B21;&#x83B7;&#x53D6;&#x7684;&#x914D;&#x7F6E;&#x5185;&#x5BB9;</a></li>
-<li><a href="#&#x4F7F;&#x7528;&#x6D41;&#x7684;&#x65B9;&#x5F0F;&#x8BFB;&#x53D6;&#x914D;&#x7F6E;">&#x4F7F;&#x7528;&#x6D41;&#x7684;&#x65B9;&#x5F0F;&#x8BFB;&#x53D6;&#x914D;&#x7F6E;</a></li>
-<li><a href="#&#x4F7F;&#x7528;-future-&#x65B9;&#x5F0F;&#x8BFB;&#x53D6;&#x914D;&#x7F6E;">&#x4F7F;&#x7528; Future &#x65B9;&#x5F0F;&#x8BFB;&#x53D6;&#x914D;&#x7F6E;</a></li>
-<li><a href="#&#x6269;&#x5C55;-config-retriever">&#x6269;&#x5C55; Config Retriever</a></li>
-<li><a href="#&#x989D;&#x5916;&#x7684;&#x914D;&#x7F6E;&#x683C;&#x5F0F;">&#x989D;&#x5916;&#x7684;&#x914D;&#x7F6E;&#x683C;&#x5F0F;</a><ul>
-<li><a href="#hocon-&#x914D;&#x7F6E;&#x683C;&#x5F0F;">HOCON &#x914D;&#x7F6E;&#x683C;&#x5F0F;</a><ul>
-<li><a href="#&#x4F7F;&#x7528;-hocon-&#x914D;&#x7F6E;&#x683C;&#x5F0F;">&#x4F7F;&#x7528; HOCON &#x914D;&#x7F6E;&#x683C;&#x5F0F;</a></li>
-<li><a href="#&#x914D;&#x7F6E;&#x4F7F;&#x7528;-hocon-&#x683C;&#x5F0F;">&#x914D;&#x7F6E;&#x4F7F;&#x7528; HOCON &#x683C;&#x5F0F;</a></li>
-</ul>
-</li>
-<li><a href="#yaml-&#x914D;&#x7F6E;&#x683C;&#x5F0F;">YAML &#x914D;&#x7F6E;&#x683C;&#x5F0F;</a><ul>
-<li><a href="#&#x4F7F;&#x7528;-yaml-&#x914D;&#x7F6E;&#x683C;&#x5F0F;">&#x4F7F;&#x7528; YAML &#x914D;&#x7F6E;&#x683C;&#x5F0F;</a></li>
-<li><a href="#&#x914D;&#x7F6E;&#x4F7F;&#x7528;-yaml-&#x683C;&#x5F0F;">&#x914D;&#x7F6E;&#x4F7F;&#x7528; YAML &#x683C;&#x5F0F;</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#&#x989D;&#x5916;&#x7684;&#x914D;&#x7F6E;&#x4ED3;&#x5E93;">&#x989D;&#x5916;&#x7684;&#x914D;&#x7F6E;&#x4ED3;&#x5E93;</a><ul>
-<li><a href="#git-&#x914D;&#x7F6E;&#x4ED3;&#x5E93;">Git &#x914D;&#x7F6E;&#x4ED3;&#x5E93;</a><ul>
-<li><a href="#&#x4F7F;&#x7528;-git-&#x914D;&#x7F6E;&#x4ED3;&#x5E93;">&#x4F7F;&#x7528; Git &#x914D;&#x7F6E;&#x4ED3;&#x5E93;</a></li>
-<li><a href="#&#x5BF9;&#x914D;&#x7F6E;&#x4ED3;&#x5E93;&#x8FDB;&#x884C;&#x914D;&#x7F6E;">&#x5BF9;&#x914D;&#x7F6E;&#x4ED3;&#x5E93;&#x8FDB;&#x884C;&#x914D;&#x7F6E;</a></li>
-<li><a href="#&#x5B83;&#x662F;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x7684;">&#x5B83;&#x662F;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x7684;</a></li>
-</ul>
-</li>
-<li><a href="#kubernetes-configmap-&#x914D;&#x7F6E;&#x4ED3;&#x5E93;">Kubernetes ConfigMap &#x914D;&#x7F6E;&#x4ED3;&#x5E93;</a><ul>
-<li><a href="#&#x4F7F;&#x7528;-kubernetes-configmap-&#x914D;&#x7F6E;&#x4ED3;&#x5E93;">&#x4F7F;&#x7528; Kubernetes ConfigMap &#x914D;&#x7F6E;&#x4ED3;&#x5E93;</a></li>
-<li><a href="#&#x5BF9;&#x914D;&#x7F6E;&#x4ED3;&#x5E93;&#x8FDB;&#x884C;&#x914D;&#x7F6E;-1">&#x5BF9;&#x914D;&#x7F6E;&#x4ED3;&#x5E93;&#x8FDB;&#x884C;&#x914D;&#x7F6E;</a></li>
-</ul>
-</li>
-<li><a href="#redis-&#x914D;&#x7F6E;&#x4ED3;&#x5E93;">Redis &#x914D;&#x7F6E;&#x4ED3;&#x5E93;</a><ul>
-<li><a href="#&#x4F7F;&#x7528;-redis-&#x914D;&#x7F6E;&#x4ED3;&#x5E93;">&#x4F7F;&#x7528; Redis &#x914D;&#x7F6E;&#x4ED3;&#x5E93;</a></li>
-<li><a href="#&#x5BF9;&#x914D;&#x7F6E;&#x4ED3;&#x5E93;&#x8FDB;&#x884C;&#x914D;&#x7F6E;-2">&#x5BF9;&#x914D;&#x7F6E;&#x4ED3;&#x5E93;&#x8FDB;&#x884C;&#x914D;&#x7F6E;</a></li>
-</ul>
-</li>
-<li><a href="#zookeeper-&#x914D;&#x7F6E;&#x4ED3;&#x5E93;">ZooKeeper &#x914D;&#x7F6E;&#x4ED3;&#x5E93;</a><ul>
-<li><a href="#&#x4F7F;&#x7528;-zookeeper-&#x914D;&#x7F6E;&#x4ED3;&#x5E93;">&#x4F7F;&#x7528; ZooKeeper &#x914D;&#x7F6E;&#x4ED3;&#x5E93;</a></li>
-<li><a href="#&#x5BF9;&#x914D;&#x7F6E;&#x4ED3;&#x5E93;&#x8FDB;&#x884C;&#x914D;&#x7F6E;-3">&#x5BF9;&#x914D;&#x7F6E;&#x4ED3;&#x5E93;&#x8FDB;&#x884C;&#x914D;&#x7F6E;</a></li>
-</ul>
-</li>
-<li><a href="#spring-config-server-&#x914D;&#x7F6E;&#x4ED3;&#x5E93;">Spring Config Server &#x914D;&#x7F6E;&#x4ED3;&#x5E93;</a><ul>
-<li><a href="#&#x4F7F;&#x7528;-spring-config-server-&#x914D;&#x7F6E;&#x4ED3;&#x5E93;">&#x4F7F;&#x7528; Spring Config Server &#x914D;&#x7F6E;&#x4ED3;&#x5E93;</a></li>
-<li><a href="#&#x5BF9;&#x914D;&#x7F6E;&#x4ED3;&#x5E93;&#x8FDB;&#x884C;&#x914D;&#x7F6E;-4">&#x5BF9;&#x914D;&#x7F6E;&#x4ED3;&#x5E93;&#x8FDB;&#x884C;&#x914D;&#x7F6E;</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-</div><!-- tocstop -->
 <ul>
 <li><a href="http://vertx.io/docs/vertx-config/java/" target="_blank">&#x539F;&#x6587;&#x6863;</a></li>
 <li><a href="https://github.com/vert-x3/vertx-config" target="_blank">&#x7EC4;&#x4EF6;&#x6E90;&#x7801;</a></li>
@@ -1630,7 +1561,7 @@ ConfigRetriever retriever = ConfigRetriever.create(vertx,
 <blockquote>
 <p><a href="http://vertx.io/docs/vertx-config/java/" target="_blank">&#x539F;&#x6587;&#x6863;</a>&#x6700;&#x540E;&#x66F4;&#x65B0;&#x4E8E; 2017-03-15 15:54:14 CET</p>
 </blockquote>
-
+<script type="text/javascript">var className='atoc';</script>
                                 
                                 </section>
                             
@@ -1669,7 +1600,7 @@ ConfigRetriever retriever = ConfigRetriever.create(vertx,
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Vert.x Config","level":"1.11.3","depth":2,"next":{"title":"IoT","level":"1.12","depth":1,"ref":"","articles":[{"title":"MQTT Server","level":"1.12.1","depth":2,"path":"iot/MQTTServer.md","ref":"iot/MQTTServer.md","articles":[]}]},"previous":{"title":"Vert.x Circuit Breaker","level":"1.11.2","depth":2,"path":"microservices/CircuitBreaker.md","ref":"microservices/CircuitBreaker.md","articles":[]},"dir":"ltr"},"config":{"plugins":["etoc"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"etoc":{"header":1,"maxdepth":4,"mindepth":2,"notoc":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Vert.x中国用户组","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"Vert.x 官方文档中文翻译","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Offical Site":"http://www.vertx.io"}},"gitbook":"*","description":"这是针对 Vert.x 官方文档中文翻译的仓库。","extension":null},"file":{"path":"microservices/Config.md","mtime":"2017-06-05T01:51:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-09T08:26:59.154Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Vert.x Config","level":"1.11.3","depth":2,"next":{"title":"IoT","level":"1.12","depth":1,"ref":"","articles":[{"title":"MQTT Server","level":"1.12.1","depth":2,"path":"iot/MQTTServer.md","ref":"iot/MQTTServer.md","articles":[]}]},"previous":{"title":"Vert.x Circuit Breaker","level":"1.11.2","depth":2,"path":"microservices/CircuitBreaker.md","ref":"microservices/CircuitBreaker.md","articles":[]},"dir":"ltr"},"config":{"plugins":["atoc"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Vert.x中国用户组","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"Vert.x 官方文档中文翻译","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Offical Site":"http://www.vertx.io"}},"gitbook":"*","description":"这是针对 Vert.x 官方文档中文翻译的仓库。","extension":null},"file":{"path":"microservices/Config.md","mtime":"2017-06-05T01:51:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-09T08:35:44.347Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1679,7 +1610,7 @@ ConfigRetriever retriever = ConfigRetriever.create(vertx,
     <script src="../gitbook/theme.js"></script>
     
         
-        <script src="../gitbook/gitbook-plugin-etoc/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-atoc/atoc.js"></script>
         
     
         

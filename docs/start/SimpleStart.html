@@ -17,7 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-etoc/plugin.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-atoc/atoc.css">
                 
             
                 
@@ -1026,15 +1026,6 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="simplestart">SimpleStart</h1>
-<!-- toc --><div id="toc" class="toc">
-
-<ul>
-<li><a href="#hello-world">Hello World</a></li>
-<li><a href="#&#x542F;&#x52A8;&#x5668;">&#x542F;&#x52A8;&#x5668;</a></li>
-<li><a href="#&#x4E00;&#x70B9;&#x77E5;&#x8BC6;">&#x4E00;&#x70B9;&#x77E5;&#x8BC6;</a></li>
-</ul>
-
-</div><!-- tocstop -->
 <h2 id="hello-world">Hello World</h2>
 <p>Stay Hungry. Stay Foolish. &#x5982;&#x679C;&#x60A8;&#x662F;Java&#x65B0;&#x624B;&#xFF0C;&#x5BF9;&#x4E8E;&#x547D;&#x4EE4;&#x884C;&#x611F;&#x5230;&#x53D1;&#x6035;&#x7684;&#x8BDD;&#xFF0C;&#x6211;&#x4EEC;&#x7279;&#x610F;&#x4E3A;&#x60A8;&#x51C6;&#x5907;&#x4E86;&#x53EF;&#x89C6;&#x5316;&#x50BB;&#x74DC;&#x5316;&#x5165;&#x95E8;&#x6559;&#x7A0B;&#xFF0C;&#x4EE5;&#x964D;&#x4F4E;Vert.x&#x7684;&#x5165;&#x95E8;&#x95E8;&#x69DB;&#x3002;&#x4F46;&#x662F;&#x518D;&#x600E;&#x4E48;&#x50BB;&#x74DC;&#xFF0C;&#x4E5F;&#x8FD8;&#x662F;&#x9700;&#x8981;&#x60A8;&#x5177;&#x5907;&#x6709;&#x57FA;&#x672C;&#x7684;Java&#x8BED;&#x6CD5;&#x77E5;&#x8BC6;&#xFF0C;&#x6211;&#x4EEC;&#x5E76;&#x4E0D;&#x4F1A;&#x5728;&#x6B64;&#x4ECB;&#x7ECD;&#x4EFB;&#x4F55;&#x5173;&#x4E8E;Java&#x7684;&#x8BED;&#x6CD5;&#x77E5;&#x8BC6;&#xFF0C;&#x5C24;&#x5176;&#x662F;Java 1.8&#x7248;&#x672C;&#x7684;&#x57FA;&#x7840;&#x77E5;&#x8BC6;&#xFF0C;&#x56E0;&#x4E3A;Vert.x 3&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#x8981;&#x6C42;Java 8&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#x65B9;&#x53EF;&#x8FD0;&#x884C;&#xFF0C;&#x4E14;&#x5927;&#x91CF;&#x5E94;&#x7528;&#x4E86;1.8&#x52A0;&#x5165;&#x7684;&#x65B0;&#x8BED;&#x6CD5;&#x7CD6;&#xFF0C;&#x6BD4;&#x5982;&#x533F;&#x540D;&#x51FD;&#x6570;Lambda&#x3002;</p>
 <p>&#x672C;&#x6587;&#x5C06;&#x4F1A;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x57FA;&#x672C;&#x7684;HTTP&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5E76;&#x76D1;&#x542C;8080&#x7AEF;&#x53E3;&#xFF0C;&#x5BF9;&#x4E8E;&#x4EFB;&#x4F55;&#x53D1;&#x5F80;&#x8BE5;&#x670D;&#x52A1;&#x5668;&#x4EE5;&#x53CA;&#x7AEF;&#x53E3;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;Hello World&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x4E0E;Start&#x90E8;&#x5206;&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF1A;</p>
@@ -1168,7 +1159,7 @@ jar {
 <p>&#x81F3;&#x6B64;&#xFF0C;&#x5927;&#x529F;&#x544A;&#x6210;&#xFF0C;&#x6B22;&#x8FCE;&#x6765;&#x5230;Vert.x&#x7684;&#x4E16;&#x754C;&#x3002;</p>
 <h2 id="&#x4E00;&#x70B9;&#x77E5;&#x8BC6;">&#x4E00;&#x70B9;&#x77E5;&#x8BC6;</h2>
 <p>jar&#x6587;&#x4EF6;&#x672C;&#x8D28;&#x4E0A;&#x5C31;&#x662F;&#x4E00;&#x4E2A;zip&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6253;&#x5F00;zip&#x7684;&#x538B;&#x7F29;&#x5DE5;&#x5177;&#x89E3;&#x538B;&#xFF0C;&#x8BFB;&#x8005;&#x53EF;&#x81EA;&#x884C;&#x89E3;&#x538B;&#x62C6;&#x5F00;jar&#x5305;&#xFF0C;&#x770B;&#x770B;&#x76F8;&#x5173;&#x4F9D;&#x8D56;&#x7684;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x5728;&#x91CC;&#x9762;&#x3002;&#x6BD4;&#x5982;&#x4F8B;&#x5B50;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x9664;&#x4E86;&#x751F;&#x6210;io.example.MyFirstVerticle.class&#x548C;io.example.MainVerticle.class&#x6587;&#x4EF6;&#x4EE5;&#x5916;&#xFF0C;&#x8FD8;&#x540C;&#x65F6;&#x5C06;&#x4F9D;&#x8D56;&#x7684;io.vertx.core&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x538B;&#x5165;jar&#x5305;&#x3002;</p>
-
+<script type="text/javascript">var className='atoc';</script>
                                 
                                 </section>
                             
@@ -1211,7 +1202,7 @@ jar {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"简易教程","level":"1.2.1","depth":2,"next":{"title":"FAQ","level":"1.2.2","depth":2,"path":"start/FAQ.md","ref":"start/FAQ.md","articles":[]},"previous":{"title":"开始使用","level":"1.2","depth":1,"path":"start/Start.md","ref":"start/Start.md","articles":[{"title":"简易教程","level":"1.2.1","depth":2,"path":"start/SimpleStart.md","ref":"start/SimpleStart.md","articles":[]},{"title":"FAQ","level":"1.2.2","depth":2,"path":"start/FAQ.md","ref":"start/FAQ.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["etoc"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"etoc":{"header":1,"maxdepth":4,"mindepth":2,"notoc":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Vert.x中国用户组","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"Vert.x 官方文档中文翻译","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Offical Site":"http://www.vertx.io"}},"gitbook":"*","description":"这是针对 Vert.x 官方文档中文翻译的仓库。","extension":null},"file":{"path":"start/SimpleStart.md","mtime":"2017-06-05T01:51:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-09T08:26:59.154Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"简易教程","level":"1.2.1","depth":2,"next":{"title":"FAQ","level":"1.2.2","depth":2,"path":"start/FAQ.md","ref":"start/FAQ.md","articles":[]},"previous":{"title":"开始使用","level":"1.2","depth":1,"path":"start/Start.md","ref":"start/Start.md","articles":[{"title":"简易教程","level":"1.2.1","depth":2,"path":"start/SimpleStart.md","ref":"start/SimpleStart.md","articles":[]},{"title":"FAQ","level":"1.2.2","depth":2,"path":"start/FAQ.md","ref":"start/FAQ.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["atoc"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Vert.x中国用户组","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"Vert.x 官方文档中文翻译","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Offical Site":"http://www.vertx.io"}},"gitbook":"*","description":"这是针对 Vert.x 官方文档中文翻译的仓库。","extension":null},"file":{"path":"start/SimpleStart.md","mtime":"2017-06-05T01:51:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-09T08:35:44.347Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1221,7 +1212,7 @@ jar {
     <script src="../gitbook/theme.js"></script>
     
         
-        <script src="../gitbook/gitbook-plugin-etoc/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-atoc/atoc.js"></script>
         
     
         

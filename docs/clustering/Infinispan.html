@@ -17,7 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-etoc/plugin.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-atoc/atoc.css">
                 
             
                 
@@ -1026,32 +1026,6 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="infinispan-cluster-manager">Infinispan Cluster Manager</h1>
-<!-- toc --><div id="toc" class="toc">
-
-<ul>
-<li><a href="#&#x4F7F;&#x7528;-infinispan-cluster-manager">&#x4F7F;&#x7528; Infinispan cluster manager</a><ul>
-<li><a href="#&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x884C;&#x4F7F;&#x7528;">&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x884C;&#x4F7F;&#x7528;</a></li>
-<li><a href="#&#x901A;&#x8FC7;-maven-&#x6216;-gradle-&#x6784;&#x5EFA;&#x5DE5;&#x5177;&#x4F7F;&#x7528;">&#x901A;&#x8FC7; Maven &#x6216; Gradle &#x6784;&#x5EFA;&#x5DE5;&#x5177;&#x4F7F;&#x7528;</a></li>
-<li><a href="#&#x7F16;&#x7A0B;&#x5F62;&#x5F0F;&#x8C03;&#x7528;">&#x7F16;&#x7A0B;&#x5F62;&#x5F0F;&#x8C03;&#x7528;</a></li>
-</ul>
-</li>
-<li><a href="#&#x914D;&#x7F6E;-infinispan-cluster-manager">&#x914D;&#x7F6E; Infinispan cluster manager</a></li>
-<li><a href="#&#x4F7F;&#x7528;&#x5DF2;&#x6709;-infinispan-cache-manager">&#x4F7F;&#x7528;&#x5DF2;&#x6709; Infinispan Cache Manager</a></li>
-<li><a href="#&#x9002;&#x914D;-openshift-3">&#x9002;&#x914D; Openshift 3</a></li>
-<li><a href="#&#x9002;&#x914D;-docker-compose">&#x9002;&#x914D; Docker Compose</a></li>
-<li><a href="#&#x6545;&#x969C;&#x6392;&#x9664;">&#x6545;&#x969C;&#x6392;&#x9664;</a><ul>
-<li><a href="#&#x7EC4;&#x64AD;&#x672A;&#x6B63;&#x5E38;&#x5F00;&#x542F;">&#x7EC4;&#x64AD;&#x672A;&#x6B63;&#x5E38;&#x5F00;&#x542F;</a></li>
-<li><a href="#&#x4F7F;&#x7528;&#x9519;&#x8BEF;&#x7684;&#x7F51;&#x7EDC;&#x63A5;&#x53E3;">&#x4F7F;&#x7528;&#x9519;&#x8BEF;&#x7684;&#x7F51;&#x7EDC;&#x63A5;&#x53E3;</a></li>
-<li><a href="#&#x4F7F;&#x7528;vpn">&#x4F7F;&#x7528;VPN</a></li>
-<li><a href="#&#x7EC4;&#x64AD;&#x88AB;&#x7981;&#x7528;">&#x7EC4;&#x64AD;&#x88AB;&#x7981;&#x7528;</a></li>
-<li><a href="#ipv6-&#x9519;&#x8BEF;">IPv6 &#x9519;&#x8BEF;</a></li>
-</ul>
-</li>
-<li><a href="#infinispan-&#x65E5;&#x5FD7;&#x914D;&#x7F6E;">Infinispan &#x65E5;&#x5FD7;&#x914D;&#x7F6E;</a></li>
-<li><a href="#jgroups-&#x65E5;&#x5FD7;&#x914D;&#x7F6E;">JGroups &#x65E5;&#x5FD7;&#x914D;&#x7F6E;</a></li>
-</ul>
-
-</div><!-- tocstop -->
 <blockquote>
 <p>&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x5F53;&#x524D;&#x7248;&#x672C;&#x8FD8;&#x5904;&#x4E8E;&#x9884;&#x89C8;&#x7248;&#xFF0C;&#x8BF7;&#x614E;&#x91CD;&#x5728;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E2D;&#x4F7F;&#x7528;
 &#x7FFB;&#x8BD1;&#xFF1A;Ranger Tsao&#xFF0C;&#x6821;&#x5BF9; &#x5B8B;&#x5B50;&#x8C6A;&#x3001;&#x8D75;&#x4EAE;</p>
@@ -1321,7 +1295,7 @@ Vertx.clusteredVertx(options, res -&gt; {
 <h2 id="jgroups-&#x65E5;&#x5FD7;&#x914D;&#x7F6E;">JGroups &#x65E5;&#x5FD7;&#x914D;&#x7F6E;</h2>
 <p>JGroups &#x9ED8;&#x8BA4;&#x91C7;&#x7528; JDK Logging &#x5B9E;&#x73B0;&#x3002;&#x540C;&#x65F6;&#x4E5F;&#x652F;&#x6301; log4j &#x4E0E; log4j2 &#xFF0C;&#x5982;&#x679C;&#x76F8;&#x5E94;&#x7684; jar &#x5305; &#x5728; classpath &#x4E2D;&#x3002;</p>
 <p>&#x5982;&#x679C;&#x60F3;&#x67E5;&#x9605;&#x66F4;&#x8BE6;&#x7EC6;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x6216;&#x5B9E;&#x73B0;&#x81EA;&#x5DF1;&#x7684;&#x65E5;&#x5FD7;&#x540E;&#x7AEF;&#xFF0C;&#x8BF7;&#x53C2;&#x8003; <a href="http://www.jgroups.org/manual/index.html#Logging" target="_blank">JGroups &#x65E5;&#x5FD7;&#x6587;&#x6863;</a></p>
-
+<script type="text/javascript">var className='atoc';</script>
                                 
                                 </section>
                             
@@ -1364,7 +1338,7 @@ Vertx.clusteredVertx(options, res -&gt; {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Infinispan","level":"1.15.2","depth":2,"next":{"title":"Apache Ignite","level":"1.15.3","depth":2,"path":"clustering/ApacheIgnite.md","ref":"clustering/ApacheIgnite.md","articles":[]},"previous":{"title":"Hazelcast","level":"1.15.1","depth":2,"path":"clustering/Hazelcast.md","ref":"clustering/Hazelcast.md","articles":[]},"dir":"ltr"},"config":{"plugins":["etoc"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"etoc":{"header":1,"maxdepth":4,"mindepth":2,"notoc":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Vert.x中国用户组","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"Vert.x 官方文档中文翻译","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Offical Site":"http://www.vertx.io"}},"gitbook":"*","description":"这是针对 Vert.x 官方文档中文翻译的仓库。","extension":null},"file":{"path":"clustering/Infinispan.md","mtime":"2017-06-05T01:51:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-09T08:26:59.154Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Infinispan","level":"1.15.2","depth":2,"next":{"title":"Apache Ignite","level":"1.15.3","depth":2,"path":"clustering/ApacheIgnite.md","ref":"clustering/ApacheIgnite.md","articles":[]},"previous":{"title":"Hazelcast","level":"1.15.1","depth":2,"path":"clustering/Hazelcast.md","ref":"clustering/Hazelcast.md","articles":[]},"dir":"ltr"},"config":{"plugins":["atoc"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Vert.x中国用户组","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"Vert.x 官方文档中文翻译","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Offical Site":"http://www.vertx.io"}},"gitbook":"*","description":"这是针对 Vert.x 官方文档中文翻译的仓库。","extension":null},"file":{"path":"clustering/Infinispan.md","mtime":"2017-06-05T01:51:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-09T08:35:44.347Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1374,7 +1348,7 @@ Vertx.clusteredVertx(options, res -&gt; {
     <script src="../gitbook/theme.js"></script>
     
         
-        <script src="../gitbook/gitbook-plugin-etoc/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-atoc/atoc.js"></script>
         
     
         

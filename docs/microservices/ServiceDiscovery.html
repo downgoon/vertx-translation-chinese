@@ -17,7 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-etoc/plugin.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-atoc/atoc.css">
                 
             
                 
@@ -1024,93 +1024,6 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="vertx-service-discovery">Vert.x Service Discovery</h1>
-<!-- toc --><div id="toc" class="toc">
-
-<ul>
-<li><a href="#&#x7EC4;&#x4EF6;&#x4ECB;&#x7ECD;">&#x7EC4;&#x4EF6;&#x4ECB;&#x7ECD;</a></li>
-<li><a href="#&#x4F7F;&#x7528;service-discovery">&#x4F7F;&#x7528;Service Discovery</a></li>
-<li><a href="#&#x57FA;&#x672C;&#x6982;&#x5FF5;">&#x57FA;&#x672C;&#x6982;&#x5FF5;</a><ul>
-<li><a href="#&#x670D;&#x52A1;&#x8BB0;&#x5F55;">&#x670D;&#x52A1;&#x8BB0;&#x5F55;</a></li>
-<li><a href="#&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x8005;&#x548C;&#x53D1;&#x5E03;&#x8005;">&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x8005;&#x548C;&#x53D1;&#x5E03;&#x8005;</a></li>
-<li><a href="#&#x670D;&#x52A1;&#x6D88;&#x8D39;&#x8005;">&#x670D;&#x52A1;&#x6D88;&#x8D39;&#x8005;</a></li>
-<li><a href="#&#x670D;&#x52A1;&#x5BF9;&#x8C61;">&#x670D;&#x52A1;&#x5BF9;&#x8C61;</a></li>
-<li><a href="#&#x670D;&#x52A1;&#x7C7B;&#x578B;">&#x670D;&#x52A1;&#x7C7B;&#x578B;</a></li>
-<li><a href="#&#x670D;&#x52A1;&#x4E8B;&#x4EF6;">&#x670D;&#x52A1;&#x4E8B;&#x4EF6;</a></li>
-<li><a href="#&#x670D;&#x52A1;&#x5B58;&#x50A8;&#x540E;&#x7AEF;">&#x670D;&#x52A1;&#x5B58;&#x50A8;&#x540E;&#x7AEF;</a></li>
-</ul>
-</li>
-<li><a href="#&#x521B;&#x5EFA;service-discovery&#x5B9E;&#x4F8B;">&#x521B;&#x5EFA;Service Discovery&#x5B9E;&#x4F8B;</a></li>
-<li><a href="#&#x53D1;&#x5E03;&#x670D;&#x52A1;">&#x53D1;&#x5E03;&#x670D;&#x52A1;</a></li>
-<li><a href="#&#x53D6;&#x6D88;&#x53D1;&#x5E03;&#x7684;&#x670D;&#x52A1;">&#x53D6;&#x6D88;&#x53D1;&#x5E03;&#x7684;&#x670D;&#x52A1;</a></li>
-<li><a href="#&#x67E5;&#x627E;&#x670D;&#x52A1;">&#x67E5;&#x627E;&#x670D;&#x52A1;</a></li>
-<li><a href="#&#x83B7;&#x53D6;&#x670D;&#x52A1;&#x5F15;&#x7528;">&#x83B7;&#x53D6;&#x670D;&#x52A1;&#x5F15;&#x7528;</a></li>
-<li><a href="#&#x670D;&#x52A1;&#x7C7B;&#x578B;-1">&#x670D;&#x52A1;&#x7C7B;&#x578B;</a><ul>
-<li><a href="#&#x65E0;&#x7C7B;&#x578B;&#x7684;&#x670D;&#x52A1;">&#x65E0;&#x7C7B;&#x578B;&#x7684;&#x670D;&#x52A1;</a></li>
-<li><a href="#&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x670D;&#x52A1;&#x7C7B;&#x578B;">&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x670D;&#x52A1;&#x7C7B;&#x578B;</a></li>
-<li><a href="#http-endpoint">HTTP Endpoint</a><ul>
-<li><a href="#&#x53D1;&#x5E03;http-endpoint&#x670D;&#x52A1;">&#x53D1;&#x5E03;HTTP Endpoint&#x670D;&#x52A1;</a></li>
-<li><a href="#&#x8C03;&#x7528;http-endpoint&#x670D;&#x52A1;">&#x8C03;&#x7528;HTTP Endpoint&#x670D;&#x52A1;</a></li>
-</ul>
-</li>
-<li><a href="#event-bus-&#x670D;&#x52A1;">Event Bus &#x670D;&#x52A1;</a><ul>
-<li><a href="#&#x53D1;&#x5E03;event-bus-&#x670D;&#x52A1;">&#x53D1;&#x5E03;Event Bus &#x670D;&#x52A1;</a></li>
-<li><a href="#&#x8C03;&#x7528;-event-bus-&#x670D;&#x52A1;">&#x8C03;&#x7528; Event Bus &#x670D;&#x52A1;</a></li>
-</ul>
-</li>
-<li><a href="#&#x6D88;&#x606F;&#x6E90;&#x670D;&#x52A1;">&#x6D88;&#x606F;&#x6E90;&#x670D;&#x52A1;</a><ul>
-<li><a href="#&#x53D1;&#x5E03;&#x6D88;&#x606F;&#x6E90;&#x670D;&#x52A1;">&#x53D1;&#x5E03;&#x6D88;&#x606F;&#x6E90;&#x670D;&#x52A1;</a></li>
-<li><a href="#&#x6D88;&#x8D39;&#x6D88;&#x606F;&#x6E90;&#x670D;&#x52A1;">&#x6D88;&#x8D39;&#x6D88;&#x606F;&#x6E90;&#x670D;&#x52A1;</a></li>
-</ul>
-</li>
-<li><a href="#jdbc-&#x6570;&#x636E;&#x6E90;">JDBC &#x6570;&#x636E;&#x6E90;</a><ul>
-<li><a href="#&#x53D1;&#x5E03;-jdbc-&#x6570;&#x636E;&#x6E90;&#x670D;&#x52A1;">&#x53D1;&#x5E03; JDBC &#x6570;&#x636E;&#x6E90;&#x670D;&#x52A1;</a></li>
-<li><a href="#&#x6D88;&#x8D39;-jdbc-&#x6570;&#x636E;&#x6E90;&#x670D;&#x52A1;">&#x6D88;&#x8D39; JDBC &#x6570;&#x636E;&#x6E90;&#x670D;&#x52A1;</a></li>
-</ul>
-</li>
-<li><a href="#redis-&#x6570;&#x636E;&#x6E90;">Redis &#x6570;&#x636E;&#x6E90;</a><ul>
-<li><a href="#&#x53D1;&#x5E03;-redis-&#x6570;&#x636E;&#x6E90;&#x670D;&#x52A1;">&#x53D1;&#x5E03; Redis &#x6570;&#x636E;&#x6E90;&#x670D;&#x52A1;</a></li>
-<li><a href="#&#x6D88;&#x8D39;-redis-&#x6570;&#x636E;&#x6E90;&#x670D;&#x52A1;">&#x6D88;&#x8D39; Redis &#x6570;&#x636E;&#x6E90;&#x670D;&#x52A1;</a></li>
-</ul>
-</li>
-<li><a href="#mongo-&#x6570;&#x636E;&#x6E90;">Mongo &#x6570;&#x636E;&#x6E90;</a><ul>
-<li><a href="#&#x53D1;&#x5E03;-mongo-&#x6570;&#x636E;&#x6E90;&#x670D;&#x52A1;">&#x53D1;&#x5E03; Mongo &#x6570;&#x636E;&#x6E90;&#x670D;&#x52A1;</a></li>
-<li><a href="#&#x6D88;&#x8D39;-mongo-&#x6570;&#x636E;&#x6E90;&#x670D;&#x52A1;">&#x6D88;&#x8D39; Mongo &#x6570;&#x636E;&#x6E90;&#x670D;&#x52A1;</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#&#x76D1;&#x542C;&#x670D;&#x52A1;&#x7684;&#x4E0A;&#x7EBF;&#x4E0E;&#x4E0B;&#x7EBF;">&#x76D1;&#x542C;&#x670D;&#x52A1;&#x7684;&#x4E0A;&#x7EBF;&#x4E0E;&#x4E0B;&#x7EBF;</a></li>
-<li><a href="#&#x76D1;&#x542C;&#x670D;&#x52A1;&#x7684;&#x4F7F;&#x7528;">&#x76D1;&#x542C;&#x670D;&#x52A1;&#x7684;&#x4F7F;&#x7528;</a></li>
-<li><a href="#&#x670D;&#x52A1;&#x53D1;&#x73B0;&#x6865;&#x63A5;&#x5668;">&#x670D;&#x52A1;&#x53D1;&#x73B0;&#x6865;&#x63A5;&#x5668;</a></li>
-<li><a href="#&#x53EF;&#x7528;&#x7684;&#x670D;&#x52A1;&#x53D1;&#x73B0;&#x6865;&#x63A5;&#x5668;">&#x53EF;&#x7528;&#x7684;&#x670D;&#x52A1;&#x53D1;&#x73B0;&#x6865;&#x63A5;&#x5668;</a><ul>
-<li><a href="#consul-&#x6865;&#x63A5;&#x5668;">Consul &#x6865;&#x63A5;&#x5668;</a><ul>
-<li><a href="#&#x6865;&#x63A5;&#x5668;&#x7684;&#x4F7F;&#x7528;">&#x6865;&#x63A5;&#x5668;&#x7684;&#x4F7F;&#x7528;</a></li>
-</ul>
-</li>
-<li><a href="#kubernetes-&#x6865;&#x63A5;&#x5668;">Kubernetes &#x6865;&#x63A5;&#x5668;</a><ul>
-<li><a href="#&#x6865;&#x63A5;&#x5668;&#x7684;&#x4F7F;&#x7528;-1">&#x6865;&#x63A5;&#x5668;&#x7684;&#x4F7F;&#x7528;</a></li>
-<li><a href="#&#x6865;&#x63A5;&#x5668;&#x7684;&#x914D;&#x7F6E;">&#x6865;&#x63A5;&#x5668;&#x7684;&#x914D;&#x7F6E;</a></li>
-<li><a href="#&#x670D;&#x52A1;&#x8BB0;&#x5F55;&#x7684;&#x6620;&#x5C04;">&#x670D;&#x52A1;&#x8BB0;&#x5F55;&#x7684;&#x6620;&#x5C04;</a></li>
-<li><a href="#&#x52A8;&#x6001;&#x6027;">&#x52A8;&#x6001;&#x6027;</a></li>
-</ul>
-</li>
-<li><a href="#docker-links-&#x6865;&#x63A5;&#x5668;">Docker Links &#x6865;&#x63A5;&#x5668;</a><ul>
-<li><a href="#&#x6865;&#x63A5;&#x5668;&#x7684;&#x4F7F;&#x7528;-2">&#x6865;&#x63A5;&#x5668;&#x7684;&#x4F7F;&#x7528;</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#&#x5176;&#x4ED6;&#x5B58;&#x50A8;&#x540E;&#x7AEF;">&#x5176;&#x4ED6;&#x5B58;&#x50A8;&#x540E;&#x7AEF;</a><ul>
-<li><a href="#redis-&#x5B58;&#x50A8;&#x540E;&#x7AEF;">Redis &#x5B58;&#x50A8;&#x540E;&#x7AEF;</a><ul>
-<li><a href="#&#x4F7F;&#x7528;-redis-&#x5B58;&#x50A8;&#x540E;&#x7AEF;">&#x4F7F;&#x7528; Redis &#x5B58;&#x50A8;&#x540E;&#x7AEF;</a></li>
-<li><a href="#&#x914D;&#x7F6E;">&#x914D;&#x7F6E;</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-</div><!-- tocstop -->
 <ul>
 <li><a href="http://vertx.io/docs/vertx-service-discovery/java/" target="_blank">&#x539F;&#x6587;&#x6863;</a></li>
 <li><a href="https://github.com/vert-x3/vertx-service-discovery" target="_blank">&#x7EC4;&#x4EF6;&#x6E90;&#x7801;</a></li>
@@ -1962,7 +1875,7 @@ discovery.publish(record, ar -&gt; {
 <blockquote>
 <p><a href="http://vertx.io/docs/vertx-service-discovery/java/" target="_blank">&#x539F;&#x6587;&#x6863;</a>&#x6700;&#x540E;&#x66F4;&#x65B0;&#x4E8E; 2017-03-15 15:54:14 CET</p>
 </blockquote>
-
+<script type="text/javascript">var className='atoc';</script>
                                 
                                 </section>
                             
@@ -2001,7 +1914,7 @@ discovery.publish(record, ar -&gt; {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Vert.x Service Discovery","level":"1.11.1","depth":2,"next":{"title":"Vert.x Circuit Breaker","level":"1.11.2","depth":2,"path":"microservices/CircuitBreaker.md","ref":"microservices/CircuitBreaker.md","articles":[]},"previous":{"title":"Microservices","level":"1.11","depth":1,"ref":"","articles":[{"title":"Vert.x Service Discovery","level":"1.11.1","depth":2,"path":"microservices/ServiceDiscovery.md","ref":"microservices/ServiceDiscovery.md","articles":[]},{"title":"Vert.x Circuit Breaker","level":"1.11.2","depth":2,"path":"microservices/CircuitBreaker.md","ref":"microservices/CircuitBreaker.md","articles":[]},{"title":"Vert.x Config","level":"1.11.3","depth":2,"path":"microservices/Config.md","ref":"microservices/Config.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["etoc"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"etoc":{"header":1,"maxdepth":4,"mindepth":2,"notoc":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Vert.x中国用户组","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"Vert.x 官方文档中文翻译","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Offical Site":"http://www.vertx.io"}},"gitbook":"*","description":"这是针对 Vert.x 官方文档中文翻译的仓库。","extension":null},"file":{"path":"microservices/ServiceDiscovery.md","mtime":"2017-06-05T01:51:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-09T08:26:59.154Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Vert.x Service Discovery","level":"1.11.1","depth":2,"next":{"title":"Vert.x Circuit Breaker","level":"1.11.2","depth":2,"path":"microservices/CircuitBreaker.md","ref":"microservices/CircuitBreaker.md","articles":[]},"previous":{"title":"Microservices","level":"1.11","depth":1,"ref":"","articles":[{"title":"Vert.x Service Discovery","level":"1.11.1","depth":2,"path":"microservices/ServiceDiscovery.md","ref":"microservices/ServiceDiscovery.md","articles":[]},{"title":"Vert.x Circuit Breaker","level":"1.11.2","depth":2,"path":"microservices/CircuitBreaker.md","ref":"microservices/CircuitBreaker.md","articles":[]},{"title":"Vert.x Config","level":"1.11.3","depth":2,"path":"microservices/Config.md","ref":"microservices/Config.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["atoc"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"atoc":{"addClass":true,"className":"atoc"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Vert.x中国用户组","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"","variables":{},"title":"Vert.x 官方文档中文翻译","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Offical Site":"http://www.vertx.io"}},"gitbook":"*","description":"这是针对 Vert.x 官方文档中文翻译的仓库。","extension":null},"file":{"path":"microservices/ServiceDiscovery.md","mtime":"2017-06-05T01:51:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-09T08:35:44.347Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -2011,7 +1924,7 @@ discovery.publish(record, ar -&gt; {
     <script src="../gitbook/theme.js"></script>
     
         
-        <script src="../gitbook/gitbook-plugin-etoc/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-atoc/atoc.js"></script>
         
     
         
